@@ -31,6 +31,10 @@ public class ChatEvent implements Listener {
 			Messages.sendArenaMessage(Manager.getArena(player), ChatColor.WHITE + player.getName() + " ("
 					+ ChatColor.GOLD + "Prestige" + ChatColor.WHITE + "): " + ChatColor.GRAY + event.getMessage());
 		}
+		else {
+			Messages.sendArenaMessage(Manager.getArena(player), ChatColor.WHITE + player.getName() + " (Lvl " + 
+				      ChatColor.GOLD + Settings.getInstance().getPlayerStat(player, "Level") + ChatColor.WHITE + "): " + ChatColor.GRAY + event.getMessage());
+		}
 		Bukkit.getLogger().info("[OITC] [Arena " + Manager.getArena(player).getID() + "] " + player.getName() + ": " + event.getMessage());
 	}
 	
